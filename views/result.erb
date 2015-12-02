@@ -1,0 +1,28 @@
+  <h1>Calculator of doom!</h1>
+  
+
+  <form action='/calculate' method='get'>
+  <label>First Number: </label><input type='text' name='first'/>
+  <hr/>
+  <label>Operator: </label><input type='text' name='operator'/>
+  <hr/>
+  <label>Second Number: </label><input type='text' name='second'/>
+  <hr/>
+  <button>Calculate NOW!!!</button>
+
+  </form>
+
+
+  <% if @result %>
+  <section>
+    <header>
+      <h1>ReSuLt:</h1>
+    </header>
+    <p>The first number was: <%= @first %></p>
+    <p>The operator was: <%= @operator %></p>
+    <p>The second number was: <%= @second %></p>
+    <hr/>
+    <p>The result of <%= @first %> <%= @operator %> <%= @second %> is <%= @result %></p>
+    <h1>AWESOME...........</h1>
+  </section>
+  <% end %>
